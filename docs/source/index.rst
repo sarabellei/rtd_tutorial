@@ -24,6 +24,7 @@ Table of Contents
     REPL
     XEUS
     cudaC++
+    grammar
     references
 
 .. note::
