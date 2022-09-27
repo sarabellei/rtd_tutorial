@@ -77,10 +77,13 @@ Table of Contents
 --------
 
 .. toctree::
+ :maxdepth: 2
   :caption: Table of Contents
    :name: mastertoc
+   
+   source/references
+   
+  
+  
 
    foo
-
-  What is Cling?/Overview
-  Interactivity in C++ with Cling
