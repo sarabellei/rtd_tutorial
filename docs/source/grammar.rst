@@ -10,7 +10,7 @@ Once we start **Cling** it automatically includes several header files and its o
 Grammar
 ------------
 
-**Cling** is capable to parse everything that `Clang <https://clang.llvm.org/>`_. can do. In addition, **Cling** can parse some interpreter-specific C++ extensions.
+**Cling** is capable to parse everything that `Clang <https://clang.llvm.org/>`_ can do. In addition, **Cling** can parse some interpreter-specific C++ extensions.
 
 Metaprocessor
 ------------
