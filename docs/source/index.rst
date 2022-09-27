@@ -1,12 +1,11 @@
-Welcome to Sara Read The Docs test page
+Cling
 =======================================
 
+**Cling** is an interactive C++ interpreter built on top of Clang and LLVM.
+It uses LLVM’s *Just-In-Time* (*JIT*) compiler to provide a fast and optimized compilation pipeline. Cling uses the *REPL* (*read-print-evaluate-loop*) approach, making rapid application development in C++ possible, avoiding the classic edit-compile-run-debug cycle approach. 
+You can download Cling from `GitHub <https://github.com/root-project/cling>`_
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-With or without you!
+
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
@@ -19,12 +18,11 @@ how to :ref:`installation` the project.
    
 .. figure:: images/sphynx_cat.jpeg
    
-What is Cling?/Overview
------------------------------------
-Cling is an interactive C++ interpreter built on top of Clang and LLVM.
-It uses LLVM’sJust-In-Time (JIT) compiler to provide a fast and optimized compilation pipeline. Cling uses the REPL (read-print-evaluate-loop) approach, making rapid application development in C++ possible, avoiding the classic edit-compile-run-debug cycle approach. 
+
+
 
 When and why was Cling developed?/Background
+--------------------------------------------
 Cling is a core component of ROOT providing essential functionality for the analysis of the vast amounts of very complex data produced by the experimental high-energy physics community, enabling interactive exploration, dynamic interoperability and rapid prototyping capabilities to C++ developers. It was first released in 2014 with the aim to facilitate the processing of scientific data in the field of high-energy physics (HEP) as the interactive, C++ interpreter in  ROOT. 
 ROOT is an open-source program written primarily in C++, developed by research groups in HEP including CERN, Fermilab and Princeton, and now used by most HEP experiments. CERN is an European research organization that operates the largest particle physics laboratory in the world. Its experiments collect petabytes of data per year to be serialized, analyzed, and visualized as C++ objects.
 
