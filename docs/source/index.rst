@@ -8,12 +8,7 @@ It uses **LLVM**'s *Just-In-Time* (`JIT <https://en.wikipedia.org/wiki/Just-in-t
 You can download Cling from `GitHub <https://github.com/root-project/cling>`_.
 
 
-.. note::
-
-  This project is under active development.
-  Cling has its documentation hosted on Read the Docs.
-   
-   
+You can download **Cling** from: XXXXXXXXX TO BE COMPLETED
 
    
 
@@ -30,3 +25,8 @@ Table of Contents
     XEUS
     cudaC++
     references
+
+.. note::
+
+  This project is under active development.
+  Cling has its documentation hosted on Read the Docs.
