@@ -76,10 +76,11 @@ how to :ref:`installation` the project.
 Table of Contents
 --------
 
-.. toctree::
- :maxdepth: 2
-  :caption: Table of Contents
-   :name: mastertoc
+ ..  toctree::
+     :hidden:
+
+     Introduction/Index
+     Configuration/Index
    
    source/references
    
