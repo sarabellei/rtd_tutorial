@@ -76,15 +76,7 @@ how to :ref:`installation` the project.
 Table of Contents
 --------
 
- ..  toctree::
-     :hidden:
-
-     Introduction/Index
-     Configuration/Index
-   
-   source/references
-   
-  
-  
-
-   foo
+ .. toctree::
+    :numbered:
+    
+    source/references
