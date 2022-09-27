@@ -17,7 +17,7 @@ how to :ref:`installation` the project.
    Lumache has its documentation hosted on Read the Docs.
    Lumache has its documentation hosted on Read the Docs. 
    
-.. figure:: /images/put an imagehere.
+.. figure:: images/sphynx_cat.jpeg
    
 What is Cling?/Overview
 -----------------------------------
