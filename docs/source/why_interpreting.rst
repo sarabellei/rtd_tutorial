@@ -1,12 +1,58 @@
-Cling is (also, but not only) REPL:
+Why interpreting C++ with Cling?
 -----------------------------------
-A `read-eval-print-loop <https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop>`_ (**REPL**) is an interactive programming environment that takes user inputs, executes them, and returns the result to the user. In order to enable interactivity in C++, **Cling** provides several extensions to the C++ language:
-Defining functions in the global scope: **Cling** redefines expressions at a global level. C++ provides limited support for this, **Cling** possesses the necessary semantics to re-define code while the program is running, minimizing the impedance mismatch between the **REPL** and the C++ codebase, and allowing for a seamlessly interactive programing experience.
 
-Allows for implementation of commands which provide information about the current state of the environment. eg.., has an `Application Programming Interface <https://en.wikipedia.org/wiki/API>`_ (**API**) to provide information about the current state of the environment.
+1. **Learning C++**
+   
+   One use case of **Cling** is to aid the C++ learning process. Offering imediate feedback the user can easily get familiar with the structures and spelling of the language.
 
-*Error recovery*: **Cling** has an efficient error recovery system which allows it to–  handle the errors made by the user without restarting or having to redo everything from the beginning.
+2. **Creating scripts**
+   
+   The power of an interpreter lays as well in the compactness and ease of repeatedly running a small snippet of code - aka a script. This can be done in cling by inserting the bash-like style line:
 
-*Tight feedback loop*: It provides feedback about the results of the developer’s choices that is both accurate and fast. 
+.. code:: bash
+   
+   #!/usr/bin/cling
+   
+3. **Rapid Application Development (RAD)**
 
-*Facilitates debugging*: The programmer can inspect the printed result before deciding what expression to provide for the next line of code.
+   **Cling** can be used successfully for Rapid Application Development allowing for prototyping and proofs of concept taking advantage of dynamicity and feedback during the implementation process.
+
+4. **Runtime-Generated Code**
+
+   Sometime it's convenient to create code as a reaction to input (user/network/configuration). Runtime-generated code can interface with C++ libraries.
+   
+   
+Embedding Cling:
+-----------------------------------
+
+The functionality of an application can be enriched by embedding **Cling**. To embed **Cling**, the main program has to be provided. One of the things this main program has to do is initialize the **Cling** interpreter. There are optional calls to pass command line arguments to **Cling**. Afterwards, you can call the interpreter from any anywhere within the application.
+
+For compilation and linkage the application needs the path to the **Clang** and **LLVM** libraries and the invocation is order dependent since the linker cannot do backward searches.
+
+.. code:: bash
+
+   g++ embedcling.cxx -std=c++11 -L/usr/local/lib
+                    -lclingInterpreter -lclingUtils 
+                    -lclangFrontend -lclangSerialization -lclangParse -lclangSema 
+                    -lclangAnalysis -lclangEdit -lclangLex -lclangDriver -lclangCodeGen 
+                    -lclangBasic  -lclangAST  
+                    `llvm-config 
+                      --libs bitwriter mcjit orcjit native option 
+                        ipo profiledata instrumentation objcarcopts` 
+                      -lz -pthread -ldl -ltinfo 
+                    -o embedcling
+                    
+Embedding **Cling** requires the creation of the interpreter. Optionally compiler arguments and the resource directory of LLVM can be passed. An example is the following:
+
+.. code:: bash
+
+   #include "cling/Interpreter/Interpreter.h"
+
+   int main(int argc, char** argv) {
+      const char* LLVMRESDIR = "/usr/local/"; //path to llvm resource directory
+      cling::Interpreter interp(argc, argv, LLVMRESDIR);
+
+      interp.declare("int p=0;");
+    }
+        
+A more complete example could be found in `<tools/demo/cling-demo.cpp>`_.
