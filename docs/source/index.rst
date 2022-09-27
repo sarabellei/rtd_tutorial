@@ -79,4 +79,4 @@ Table of Contents
  .. toctree::
     :numbered:
     
-    source/references
+    references
