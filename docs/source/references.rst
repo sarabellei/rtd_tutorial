@@ -1,34 +1,27 @@
-Usage
+Command Line
 =====
 
-.. _installation:
+**Cling** has its own command line, which looks like any other Unix shell. The emacs-like command line editor is what we call interactive command line or interactive shell.
 
-Installation
+Once we start **Cling** it automatically includes several header files and its own runtime universe. Thus it creates the minimal environment for the user to start.
+
+
+
+Grammar
 ------------
 
-To use Lumache, first install it using pip:
+**Cling** is capable to parse everything that `Clang <https://clang.llvm.org/>`_. can do. In addition, **Cling** can parse some interpreter-specific C++ extensions.
 
-.. code-block:: console
+Metaprocessor
+------------
 
-   (.venv) $ pip install lumache
+**Cling** *Metaprocessor* provides convenient and easy to use interface for changing the interpreter’s internal state or for executing handy commands. **Cling** provides the following metaprocessor commands:
 
-Creating recipes
-----------------
+**syntax: .(command)**, where command is:
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+:code: `x filename.cxx` - loads filename and calls void filename() if defined
+:code: `L library | filename.cxx` - loads library or filename.cxx
+:code: `printAST` - shows the abstract syntax tree after each processed entity
+:code: `I path` - adds an include path
 
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
 
