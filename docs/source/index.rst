@@ -6,15 +6,11 @@ It uses LLVM’s *Just-In-Time* (*JIT*) compiler to provide a fast and optimized
 You can download Cling from `GitHub <https://github.com/root-project/cling>`_
 
 
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
 .. note::
 
-   This project is under active development.
-   Lumache has its documentation hosted on Read the Docs.
-   Lumache has its documentation hosted on Read the Docs. 
+  This project is under active development.
+  Cling has its documentation hosted on Read the Docs.
+   
    
 .. figure:: images/sphynx_cat.jpeg
    
@@ -73,8 +69,11 @@ Cling is not just a Repl, it is an embeddable and extensible execution system fo
 You can find a detailed explanation of Cling’s design in the following paper: V Vasilev et al 2012 J. Phys.: Conf. Ser. 396 052071
 More in detail, the paper describes in detail Cling’s characteristic features  such as syntactic and semantic error recovery, execution of statements, loading of dynamic objects (i.e. external objects loaded at runtime), entity redefinition, and displaying of execution results.
 
+Check out the :doc:`usage` section for further information, including
+how to :ref:`installation` the project.
 
-Contents
+
+Table of Contents
 --------
 
 .. toctree::
