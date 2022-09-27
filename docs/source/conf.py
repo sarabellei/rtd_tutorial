@@ -17,6 +17,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'sphinx_copybutton',
 ]
 
 intersphinx_mapping = {
@@ -34,8 +35,3 @@ html_theme = 'sphinx_rtd_theme'
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
 
-extensions = [
-    ...
-    'sphinx_copybutton'
-    ...
-]
