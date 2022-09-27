@@ -19,9 +19,31 @@ Metaprocessor
 
 **syntax: .(command)**, where command is:
 
-:code: `x filename.cxx` - loads filename and calls void filename() if defined
-:code: `L library | filename.cxx` - loads library or filename.cxx
-:code: `printAST` - shows the abstract syntax tree after each processed entity
-:code: `I path` - adds an include path
 
+.. code:: bash
+
+    x filename.cxx
+    
+loads filename and calls void filename() if defined.
+
+
+.. code:: bash
+
+    L library | filename.cxx
+    
+loads library or filename.cxx.
+
+
+.. code:: bash
+
+   printAST
+    
+shows the abstract syntax tree after each processed entity.
+
+
+.. code:: bash
+
+   I path
+    
+adds an include path.
 
