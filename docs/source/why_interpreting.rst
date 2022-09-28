@@ -3,7 +3,7 @@ Why interpreting C++ with Cling?
 
 1. **Learning C++**
    
-   One use case of **Cling** is to aid the C++ learning process. Offering imediate feedback the user can easily get familiar with the structures and spelling of the language.
+   One use case of Cling is to aid the C++ learning process. Offering imediate feedback the user can easily get familiar with the structures and spelling of the language.
 
 2. **Creating scripts**
    
@@ -15,7 +15,7 @@ Why interpreting C++ with Cling?
    
 3. **Rapid Application Development (RAD)**
 
-   **Cling** can be used successfully for Rapid Application Development allowing for prototyping and proofs of concept taking advantage of dynamicity and feedback during the implementation process.
+   Cling can be used successfully for Rapid Application Development allowing for prototyping and proofs of concept taking advantage of dynamicity and feedback during the implementation process.
 
 4. **Runtime-Generated Code**
 
@@ -25,9 +25,9 @@ Why interpreting C++ with Cling?
 Embedding Cling:
 -----------------------------------
 
-The functionality of an application can be enriched by embedding **Cling**. To embed **Cling**, the main program has to be provided. One of the things this main program has to do is initialize the **Cling** interpreter. There are optional calls to pass command line arguments to **Cling**. Afterwards, you can call the interpreter from any anywhere within the application.
+The functionality of an application can be enriched by embedding Cling. To embed Cling, the main program has to be provided. One of the things this main program has to do is initialize the Cling interpreter. There are optional calls to pass command line arguments to Cling. Afterwards, you can call the interpreter from any anywhere within the application.
 
-For compilation and linkage the application needs the path to the **Clang** and **LLVM** libraries and the invocation is order dependent since the linker cannot do backward searches.
+For compilation and linkage the application needs the path to the Clang and LLVM libraries and the invocation is order dependent since the linker cannot do backward searches.
 
 .. code:: bash
 
@@ -42,7 +42,7 @@ For compilation and linkage the application needs the path to the **Clang** and 
                       -lz -pthread -ldl -ltinfo 
                     -o embedcling
                     
-Embedding **Cling** requires the creation of the interpreter. Optionally compiler arguments and the resource directory of LLVM can be passed. An example is the following:
+Embedding Cling requires the creation of the interpreter. Optionally compiler arguments and the resource directory of LLVM can be passed. An example is the following:
 
 .. code:: bash
 

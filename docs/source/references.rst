@@ -2,7 +2,7 @@ Literature
 =====
 
 
-What is Cling?:
+What is Cling?
 ------------
 
 `Relaxing the One Definition Rule in Interpreted C++ <https://dl.acm.org/doi/10.1145/3377555.3377901>`_
