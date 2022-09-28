@@ -1,4 +1,4 @@
-Implementation Overview
+Used Technology
 -----------------------------------
 `LLVM <https://llvm.org/>`_ is a free, open-source compiler infrastructure under the `Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0>`_. It is designed as a collection of tools including Front Ends parsers, Middle Ends optimizers, and Back Ends to produce machine code out of those programs. 
 
